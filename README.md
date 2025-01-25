@@ -33,11 +33,11 @@ The goal of this project is to analyze housing data and identify the most influe
 ## Data overview
 - **Observations/rows**: 506  
 - **Variables**:
-  1. **Crime.Rate**: Local crime rate per capita  
-  2. **Average.Rooms**: Average number of rooms in homes  
-  3. **Public.Transport.Access**: Proximity to public transport (1–10)  
-  4. **Number.of.Schools**: Number of local schools  
-  5. **Median.Home.Value**: Median value of homes (target variable)
+  1) **Crime.Rate**: Local crime rate per capita  
+  2) **Average.Rooms**: Average number of rooms in homes  
+  3) **Public.Transport.Access**: Proximity to public transport (1–10)  
+  4) **Number.of.Schools**: Number of local schools  
+  5) **Median.Home.Value**: Median value of homes (target variable)
 
 A quick statistical summary and structure check revealed:
 - Missing values in **Crime.Rate** (25) and **Average.Rooms** (15).
