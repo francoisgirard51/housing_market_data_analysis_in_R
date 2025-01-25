@@ -1,4 +1,4 @@
-# Housing Price Analysis (in R)
+# Housing price analysis (in R)
 
 This project walks through a data analysis of a housing dataset, focusing on understanding the relationships between various features and the **Median.Home.Value**.
 
@@ -12,15 +12,15 @@ For this project, you need R and R studio installed on top of the having followi
 
 ---
 
-## Table of Contents
+## Table of contents
 1. [Introduction](#introduction)  
-2. [Data Overview](#data-overview)  
-3. [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)  
-4. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
-5. [Correlation Analysis](#correlation-analysis)  
-6. [Handling Missing Values](#handling-missing-values)  
-7. [Data Visualization](#data-visualization)  
-8. [Hypothesis Testing (Linear Regression)](#hypothesis-testing-linear-regression)  
+2. [Data overview](#data-overview)  
+3. [Data cleaning and preprocessing](#data-cleaning-and-preprocessing)  
+4. [Exploratory data analysis (EDA)](#exploratory-data-analysis-eda)  
+5. [Correlation analysis](#correlation-analysis)  
+6. [Handling missing values](#handling-missing-values)  
+7. [Data visualization](#data-visualization)  
+8. [Hypothesis testing (linear regression)](#hypothesis-testing-linear-regression)  
 9. [Conclusion](#conclusion)
 
 ---
@@ -30,7 +30,7 @@ The goal of this project is to analyze housing data and identify the most influe
 
 ---
 
-## Data Overview
+## Data overview
 - **Observations/rows**: 506  
 - **Variables**:
   1. **Crime.Rate**: Local crime rate per capita  
@@ -46,14 +46,14 @@ A quick statistical summary and structure check revealed:
 
 ---
 
-## Data Cleaning and Preprocessing
-1. **Load the Data**  
+## Data cleaning and preprocessing
+1. **Load the data**  
    ```r
    housing_data <- read.csv("housing_data.csv")
    head(housing_data)
    str(housing_data)
    ```
-2. **Overview and Summary**  
+2. **Overview and summary**  
    ```r
    summary(housing_data)
    ```
@@ -61,8 +61,8 @@ A quick statistical summary and structure check revealed:
 
 ---
 
-## Exploratory Data Analysis
-- **Statistical Summaries**:  
+## Exploratory data analysis
+- **Statistical summaries**:  
   We calculated **mean**, **median**, and **mode** for each variable to gain insights into their central tendencies and distributions.
 - **Findings**:  
   - **Crime.Rate** has a mean of ~3.14 and median of ~3.03.  
@@ -73,7 +73,7 @@ These statistics suggested that **Average.Rooms** aligns closely around its mean
 
 ---
 
-## Correlation Analysis
+## Correlation analysis
 We used a correlation matrix to understand how the variables relate to each other:
 
 ```r
@@ -87,7 +87,7 @@ We note that:
 
 ---
 
-## Handling Missing Values
+## Handling missing values
 We replaced missing values with the **median** of their respective columns:
 
 ```r
@@ -105,7 +105,7 @@ After this step, there are no missing values left in the dataset.
 
 ---
 
-## Data Visualization
+## Data visualization
 We plotted histograms and scatter plots to visualize the distribution and relationships of variables. For instance:
 
 ```r
@@ -123,7 +123,7 @@ ggplot(housing_data, aes(x = Median.Home.Value)) +
 
 ---
 
-## Hypothesis Testing (Linear Regression)
+## Hypothesis testing (linear regression)
 A simple linear regression was performed to test whether **Average.Rooms** significantly predicts **Median.Home.Value**:
 
 ```r
@@ -143,9 +143,9 @@ The regression line plot (with `geom_smooth`) visually confirms the strong posit
 ---
 
 ## Conclusion
-1. **Data Quality**: Missing values in **Crime.Rate** and **Average.Rooms** were successfully handled via median imputation.  
-2. **Key Insights**: **Average.Rooms** emerges as the most influential variable for predicting **Median.Home.Value**, showing a strong linear relationship.  
+1. **Data quality**: Missing values in **Crime.Rate** and **Average.Rooms** were successfully handled via median imputation.  
+2. **Key insights**: **Average.Rooms** emerges as the most influential variable for predicting **Median.Home.Value**, showing a strong linear relationship.  
 3. **Implications**: While this model focuses on **Average.Rooms**, other variables (e.g., **Crime.Rate**, **Public.Transport.Access**, **Number.of.Schools**) appeared less predictive of home values in this dataset.  
-4. **Next Steps**: Incorporating additional features or conducting a multiple regression could offer a deeper understanding of the factors influencing housing prices.
+4. **Next steps**: Incorporating additional features or conducting a multiple regression could offer a deeper understanding of the factors influencing housing prices.
 
 The analysis demonstrates that the average number of rooms is a significant and robust predictor of median home value in this dataset, though real-world housing markets typically involve many more nuanced factors.
