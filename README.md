@@ -4,7 +4,7 @@ This project walks through a data analysis of a housing dataset, focusing on und
 
 ## Project requirements
 
-For this project, you need R and R studio installed on top of the having following libraries installed:
+For this project, you need R and R studio installed on top of having following libraries installed:
 
     ggplot2 
     dplyr
